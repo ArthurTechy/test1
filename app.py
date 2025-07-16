@@ -87,7 +87,7 @@ def load_model():
     except Exception as e:
         return None, None, None, {'success': False, 'error': str(e)}
 
-def predict_diabetes_risk(patient_data, model, preprocessor, threshold):
+def predict_diabetes_risk(patient_data, preprocessor, model, threshold):
     """Predict diabetes risk for a patient"""
     try:
         # Preprocess data with uncertainty information
@@ -291,7 +291,7 @@ def main():
                 st.write("✅ Patient data prepared")
                 
                 # Make prediction
-                results = predict_diabetes_risk(patient_data, model, preprocessor, threshold)
+                results = predict_diabetes_risk(patient_data, preprocessor, model, threshold)
                 
                 st.write("✅ Prediction completed")
                 
