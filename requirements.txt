@@ -4,7 +4,7 @@ numpy
 scikit-learn==1.6.1
 joblib
 dill
-xgboost
+xgboost==2.1.4
 catboost
 matplotlib
 seaborn
